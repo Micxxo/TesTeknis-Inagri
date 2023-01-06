@@ -1,0 +1,94 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Azan",
+    "email": "zann@gmail.com",
+    "password": "123",
+    "confPassword": "123",
+    "role": "user"
+}
+
+###
+// get All user
+GET http://localhost:5000/users
+
+###
+//get single dara
+GET http://localhost:5000/users/7001ee14-40d3-45de-9fa5-93c57faad307
+
+
+###
+//update user
+PATCH  http://localhost:5000/users/8709267f-6f67-4f19-a288-3af12144f612
+Content-Type: application/json
+
+{
+    "name": "sijohn",
+    "email": "john2@gmail.com",
+    "password": "mangjon",
+    "confPassword": "mangjon",
+    "role": "user"
+}
+
+
+###
+//del user
+DELETE http://localhost:5000/users/9a5d2d83-0613-424f-bae5-1da188ffebff
+
+// login
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "mbah2@gmail.com",
+    "password": "mbah1234"
+}
+
+//
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+//get all product
+###
+GET http://localhost:5000/products
+
+//get one data
+###
+GET http://localhost:5000/products/e01483a0-1225-46f2-a06d-0216e6b6f1b3
+
+
+//post data
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "punya mbah",
+    "price": 212232
+}
+
+###
+PATCH http://localhost:5000/products/e01483a0-1225-46f2-a06d-0216e6b6f1b3
+Content-Type: application/json
+
+{
+    "name": "updated",
+    "price": 212232
+}
+
+###
+DELETE http://localhost:5000/products/e01483a0-1225-46f2-a06d-0216e6b6f1b3
